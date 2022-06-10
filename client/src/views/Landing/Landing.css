@@ -1,0 +1,153 @@
+#Landing-view{
+    height: 100vh;
+}
+#Landing-view>div>div{
+    display: flex;
+    justify-content: space-between;
+    /* position: relative; */
+}
+#LeftBar{
+    width: 10vw;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(4px);
+    padding: 2vh 2% 4vh 2%;
+    height: 94vh ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#LeftBar>div>img{
+    width: 100%;
+
+}
+#LeftBar li{
+    color: #7C7C7C;
+    font-weight: 600;
+    margin-bottom: 20%;
+    cursor: pointer;
+    transition: .2s;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+}
+#LeftBar li:hover{
+    opacity: 0.7;
+}
+#LeftBar li:last-child{
+    margin-bottom: 0;
+}
+#LeftBar li.video-selected{
+    color: white;
+    border-bottom: 1px solid;
+}
+
+#LeftBar li::after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--azul);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+#LeftBar li:hover {
+    color: #95a5a6;
+}
+#LeftBar li:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+/* #LeftBar li.video-selected:after{
+    content: '•';
+    margin-left: 10px;
+} */
+#video-cont{
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    /* overflow: hidden; */
+
+}
+#video-cont>video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+#info-video{
+    position: relative;
+    width: 70%;
+    margin-right: 10%;
+    padding: 2% 0 4% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 89vh;
+    color: white;
+}
+#info-video>div{
+    display: flex;
+    justify-content: space-between;
+}
+
+#info-video span{
+    font-size: 0.8em;
+}
+#info-video h1{
+    font-size: 3em;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+#info-video p{
+    font-size: 0.85em;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px #44444496;
+    cursor: pointer;
+    transition: .2s;
+    text-transform: uppercase;
+}
+#info-video p:hover{
+    letter-spacing: 4px;
+}
+#info-video button{
+    background: none;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+#close-vid{
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    right: 10%;
+    opacity: 0;
+    background-color: #272727;
+    border-radius: 150px;
+    padding: 15px;
+    width: 30px;
+    height: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 6px 16px 2px #171717;
+    opacity: 0;
+}
+#close-vid span{
+    text-align: center;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+}

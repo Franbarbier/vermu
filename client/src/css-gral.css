@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Exo:wght@100;300&family=Georama:wght@200;300;400;600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Exo:wght@100;300&family=Georama:wght@200;300;400;600;900&display=swap');
+
+
+:root {
+	--azul: #28353E;
+	--blanco: #fff;
+	--negrito: #272727;
+}
+
+::selection{ background: #28353E; color: #fafafa }
+*{ margin: 0; padding: 0; }
+a{ text-decoration: none; color: inherit;}
+li{ list-style: none; }
+body{ font-family: 'Georama'; font-weight: 100; overflow-x: hidden; color: var(--negrito)}
+h1, h2{ font-family: 'Georama'; }
+h5{ font-family: 'Georama'; font-weight: 400; }
+button, input{ font-family: 'Georama'; }
+
+.cont80{
+	width: 80%;
+	display: block;
+	margin: auto;
+}
+
+::-webkit-scrollbar{width:6px;position:absolute}
+::-webkit-scrollbar:hover{width:6px}
+::-webkit-scrollbar-track{background:hsla(0,0%,78%,.1);transition:background .2s}
+::-webkit-scrollbar-track:hover{background:hsla(0,0%,78%,.5)}
+::-webkit-scrollbar-thumb{background:hsla(0,0%,47%,.8);transition:background .2s;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+::-webkit-scrollbar-thumb:hover{background:hsla(0,0%,47%,.9)}
+
+body{
+	scroll-behavior: smooth;
+	/* cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAASFBMVEUAAAD7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/uiAKvrAAAAGHRSTlMATixLlBAvG51CBa8yHaWPIhJ4qH13IUi1PrbwAAAAn0lEQVQoz9VSSQrEMAyrEzf73mX+/9OhA0PtNJBzdYpQELal5R1YTxGCONexKOAw3psDxOCDthkhOhcBs9UPVSb5f8tNdvpqk7qZSpb7qywplVlRWgG5G0IlrDTgMrRCmDCxm9QIwoJ3XHY+0Mm2p8zMu0UjMy97P9peJotNzjI9Ko/kwyPhiBYR9C9QtHFYh3bVoZE6MNRylanU5RX4AuV4BXewV0+ZAAAAAElFTkSuQmCC")
+      15 15,
+    pointer; */
+}

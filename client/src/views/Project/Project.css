@@ -1,0 +1,129 @@
+#Project-view>main{
+    background-color: #272727;
+    min-height: 90vh;
+}
+#Project-view .logo{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 10%;
+    filter: invert(0.6);
+}
+#video-project-cont{
+    max-width: 55vw;
+    height: 61vh;
+    display: block;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 5%;
+}
+#video-project-cont video{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+#project-info{
+    padding: 3.5% 0;
+    width: 55vw;
+    margin: auto;
+    color: #fafafa;
+    text-align: center;
+}
+#project-info h3{
+    font-weight: 400;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    margin-bottom: 3%;
+}
+#project-info p{
+    font-family: 'Exo';
+    font-size: 0.8em;
+    font-weight: 100;
+}
+#project-info button{
+    font-family: 'Exo';
+    color: var(--negrito);
+    background-color: var(--blanco);
+    letter-spacing: 4px;
+    border: 1px solid var(--blanco);
+    padding: 8px 20px;
+    font-weight: 600;
+    margin-top: 4%;
+    cursor: pointer;
+
+}
+
+.tagRole{
+    font-weight: 400;
+}
+/* SEccion blanca */
+#more-info-project>div{
+    padding-top: 10%;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;    
+}
+#more-info-project>div img{width: 100%;}
+
+
+#project-description{
+    width: 55%;
+}
+#projects-related{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#more-info-project h5{
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+#more-info-project p{
+    font-family: 'Exo';
+    color: #545454;
+    font-weight: 300;
+}
+#project-description>div:first-child{
+    margin-bottom: 150px;
+}
+#project-description img{
+    margin-bottom: 40px;
+}
+#projects-related li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15%;
+    cursor: pointer;
+}
+#projects-related li>div{
+    width: 45%;
+}
+.thumb-related{
+    height: 15vh;
+    overflow: hidden;
+}
+.thumb-related img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+#projects-related li h6{
+    font-size: 0.8em;
+    font-weight: 600;
+    color: var(--negrito);
+    margin-bottom: 5px;
+}
+#projects-related li p{
+    font-size: 0.7em;
+
+}
+#btn-more-projects{
+    float: right;
+    text-align: right;
+    margin-bottom: 15%;
+    border-bottom: 1px solid var(--negrito);
+    padding-bottom: 5px;
+}

@@ -1,0 +1,103 @@
+#RightBar-view{
+    width: 25px;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(4px);
+    position: relative;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 2vh 10px 4vh 10px;
+    height: 94vh;
+    transition: .4s cubic-bezier(.44,.8,.4,1.02);
+}
+#RightBar-view>div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 100%;
+}
+#menu-bars{
+    position: relative;
+    width: 22px;
+    height: 20px;
+    cursor: pointer;
+    float: right;
+}
+#menu-bars>div{
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    background-color: var(--azul);
+    border-radius: 100px;
+    transition: .2s cubic-bezier(.44,.8,.4,1.3);
+}
+#barra-uno{
+    transform: translateY(-4px);
+}
+#barra-dos{
+    transform: translateY(4px);
+}
+.rayas-menos{
+    transform: translateY(0)!important;
+}
+#rrss{width: 100%;}
+#rrss>div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+#rrss>div a{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    opacity: 0.6;
+    /* transition: 0.2s */
+}
+#rrss>div a p{
+    font-weight: 600;
+    font-size: 0.7em;
+}
+#rrss>div a:hover{
+    opacity: 1;
+}
+#rrss>div img{
+    width: 16px;
+    display: block;
+    margin: auto 4.5px;
+}
+#RightBar-view ul{
+    margin-top: 65px;
+}
+#RightBar-view ul li{
+    text-align: right;
+    transition-duration: .2s;
+    cursor: pointer;
+    margin: 4% 0;
+    padding: 4% 0;
+    position: relative;
+    font-weight: 400;
+}
+#RightBar-view ul li:hover{
+    font-weight: 600;
+}
+#RightBar-view ul li.activeTab{
+    color: var(--azul);
+    font-weight: 600;
+}
+#RightBar-view ul li.activeTab:after{
+    content: '';
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    background-color: var(--azul);
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-35%);
+    left: 110%;
+
+}
