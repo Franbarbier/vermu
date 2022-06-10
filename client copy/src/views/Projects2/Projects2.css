@@ -1,0 +1,138 @@
+#Projects2-view .logo{
+    width: 10vw;
+    margin: 1%;
+    filter: invert(1);
+    position: absolute;
+    top: 0;
+    left: 4%;
+    z-index: 55;
+}
+#Projects2-view{
+    background-color: #1c1c1c;
+    background-color: #000;
+}
+#Projects2-view header{
+    padding: 15% 0 48px;
+    left: 0;
+    position: relative;
+    overflow: hidden;
+}
+#Projects2-view header h2{
+    text-align: center;
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: 600;
+    position: relative;
+}
+#Projects2-view header h2::after{
+    content: '';
+    display: block;
+    width: 400px;
+    height: 200px;
+    background: url('/public/assets/miscelanias/miscelanias (2).svg');
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#Projects2-view main ul {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 5%;
+}
+#Projects2-view main ul li{
+    margin: 15% 0;
+}
+#Projects2-view main ul li:last-child{
+    margin-bottom: 0%;
+}
+#Projects2-view main ul li>a>div{
+    display: flex;
+    justify-content: space-between;
+;
+}
+#Projects2-view main ul li:nth-child(even)>a>div{
+    flex-direction: row-reverse;
+}
+.videos-cont{
+    width: 66%;
+    height: 80vh;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.videos-cont video{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+.txts-cont{
+    width: 31%;
+}
+.txts-cont hr{
+    border: none;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+}
+.txts-cont h4{
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 3px;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    margin-top: 25%;
+}
+.txts-cont p{
+    font-family: 'Exo';
+    color: #ddd;
+    letter-spacing: 1px;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    font-size: .8em;
+}
+.txts-cont div{
+    display: flex;
+    margin-top: 20%;
+}
+.txts-cont div img{
+    width: 36px;
+    margin-right: 10px;
+}
+.txts-cont div img:first-child{
+    animation: primerr 3s linear infinite;
+}
+.txts-cont div img:last-child{
+    animation: segundd 5s linear infinite;
+}
+@keyframes primerr {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes segundd {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+#Projects2-view main ul li button{
+    font-family: 'Exo';
+    background-color: transparent;
+    border: 1px solid #ddd;
+    color: #fafafa;
+    padding: 8px 30px;
+    font-weight: 100;
+    font-size: .75em;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .2s;
+    margin-top: 15% ;
+}
+
+#Projects2-view main ul li:hover button{
+    background-color: #fafafa;
+    border-color: #fafafa;
+    color: black;
+    font-weight: 600;
+    letter-spacing: 5px;
+}

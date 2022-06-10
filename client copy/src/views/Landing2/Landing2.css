@@ -1,0 +1,315 @@
+#Landing2-view{
+    height: 100vh;
+    background-color: #171717;
+    overflow: hidden;
+}
+#Landing2-view>div>div{
+    display: flex;
+    justify-content: space-between;
+    /* position: relative; */
+}
+
+#Landing2-view #LeftBar{
+    position: relative;
+    background-color: var(--azul);
+    padding: 2vh 2% 4vh 5%;
+    /* height: 94vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    /* overflow-y: hidden; */
+    height: 97vh;
+}
+#Landing2-view #LeftBar>div>img{
+    width: 10vw;
+    filter: invert(1);
+}
+
+#LeftBar>aside{
+    position: absolute;
+    width: 90%;
+    left: -20%;
+    top: 340px;
+    z-index: 0;
+    
+}
+#LeftBar>aside img{
+    filter: invert(0.05);
+}
+
+#LeftBar li{
+    color: #5a6a77!important;
+    font-weight: 600;
+    /* margin-bottom: 0%; */
+    cursor: pointer;
+    transition: .2s;
+    position: relative;
+    text-transform: uppercase;
+    /* display: inline-block; */
+    
+    position: relative;
+    font-size: 3em;
+    height: 1.7em;
+}
+#LeftBar li p{
+    white-space: nowrap;
+}
+#LeftBar li>div aside{
+
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0%;
+    /* flex-wrap: nowrap; */
+    left: 0;
+    min-width: 520vw;
+}
+
+#LeftBar li span{
+    display: none;
+}
+#LeftBar .video-selected p{ display: none;}
+#LeftBar .video-selected span{
+    display: block!important;
+}
+#LeftBar .video-selected{
+    animation: marquee 10s linear infinite;
+}
+@keyframes marquee {
+    0% {
+      transform: translate(0%, 0);
+    }
+    100% {
+      transform: translate(-92.4vw, 0);
+    }
+  }
+
+.proy-descr{
+    font-size: 18px!important;
+    text-transform: none!important;
+}
+.dots{
+    font-size:18px!important;
+    padding: 0 30px;
+}
+
+#LeftBar li:hover{
+    /* color: #28353e!important; */
+    color: #fff!important;
+}
+
+
+
+#Landing2-view #LeftBar button{
+    margin-top: 15%;
+    padding-bottom: 5%;
+    background-color: transparent;
+    border: none;
+    color: #cfcfcf;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+}
+#Landing2-view #LeftBar button span{
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: .2s;
+}
+#Landing2-view #LeftBar button:hover span{
+    letter-spacing: 3px;
+    color: #fff
+}
+#Landing2-view #LeftBar button img{
+    margin-left: 10px;
+    opacity: 0.8;
+    filter: invert(1);
+}
+#Landing2-view #LeftBar button:hover img{
+    opacity: 1;
+}
+/* #LeftBar .video-selected:after{
+    content: '•';
+    margin-left: 10px;
+} */
+#Landing2-view  #video-cont{
+    position: absolute;
+    width: 60%;
+    top: 0;
+    left: 40%;
+    height: 100vh;
+    /* overflow: hidden; */
+
+}
+#video-cont>video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+#Landing2-view #info-video{
+    position: relative;
+    width: 70%;
+    margin-right: 10%;
+    padding: 2% 0 4% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 89vh;
+    color: white;
+    display: none;
+}
+#info-video>div{
+    display: flex;
+    justify-content: space-between;
+}
+
+#info-video span{
+    font-size: 0.8em;
+}
+#info-video h1{
+    font-size: 3em;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+#info-video p{
+    font-size: 0.85em;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px #44444496;
+    cursor: pointer;
+    transition: .2s;
+    text-transform: uppercase;
+}
+#info-video p:hover{
+    letter-spacing: 4px;
+}
+#info-video button{
+    background: none;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1em;
+    cursor: pointer;
+    position: relative;
+}
+
+#close-vid{
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    right: 10%;
+    opacity: 0;
+    background-color: #272727;
+    border-radius: 150px;
+    padding: 15px;
+    width: 30px;
+    height: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 6px 16px 2px #171717;
+    opacity: 0;
+}
+#close-vid span{
+    text-align: center;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+}
+
+
+/* Play button */
+
+#play-project{
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    top: 3%;
+    right: 7%;
+    filter: invert(1);
+    cursor: pointer;
+}
+#play-project>div{
+    position:relative;
+    width: 100%;
+    height: 100%;
+}
+#play-project>div img{
+    position: absolute;
+    top: 0;
+    left: 0%;
+    animation-name: rotate;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#play-project>div div{
+    font-size: 4vw;
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%)
+}
+
+
+@-webkit-keyframes rotate {
+    from { -webkit-transform: rotate(360deg); }
+    to { -webkit-transform: rotate(0); }
+}
+@-moz-keyframes rotate {
+    from { -moz-transform: rotate(360deg); }
+    to { -moz-transform: rotate(0); }
+}
+@-ms-keyframes rotate {
+    from { -ms-transform: rotate(360deg); }
+    to { -ms-transform: rotate(0); }
+}
+@-o-keyframes rotate {
+    from { -o-transform: rotate(360deg); }
+    to { -o-transform: rotate(0); }
+}
+@keyframes rotate {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0); }
+}
+
+.play-button{
+    transition: transform 0.1s  cubic-bezier(.77,-0.01,.29,1.02), color 0.1s  cubic-bezier(.77,-0.01,.29,1.02), background 0.15s  cubic-bezier(.77,-0.01,.29,1.02);
+  }
+  .play-button>div>div {
+    transition: transform 0.15s  cubic-bezier(.77,-0.01,.29,1.02);
+  }
+ 
+  
+
+
+/* animaciion renglon entra y sale */
+
+/* #LeftBar .video-selected::before{
+    content: attr(data-title), attr(data-title)
+} */
+
+/* #LeftBar li::after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--azul);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+#LeftBar li:hover {
+    color: #95a5a6;
+}
+#LeftBar li:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+} */
