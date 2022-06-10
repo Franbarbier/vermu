@@ -99,7 +99,7 @@ const menu_items = {
                                 <ul>
                                     <li><Link to="/">Home</Link></li>
                                     <li><Link to="/projects">Work</Link></li>
-                                    <li><Link to="/us">Us</Link></li>
+                                    <li><Link to="/about">Us</Link></li>
                                     <li><Link to="/contact">Contact</Link></li>
                                 </ul>
                                 <aside>
