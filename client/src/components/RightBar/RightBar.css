@@ -71,9 +71,8 @@
     margin: auto 4.5px;
 }
 #RightBar-view ul{
-    
     width: 50vw;
-    margin: 10% auto;
+    margin: 15% auto;
 }
 #RightBar-view ul li{
     text-align: center;
@@ -110,6 +109,9 @@
     0%{ transform: translateX(-5%); }
     100%{ transform: translateX(-15%); }
 }
+
+
+ 
 #RightBar-view ul li.activeTab{
     color: var(--azul);
     font-weight: 600;
@@ -131,7 +133,7 @@
 #new-menu{
     position: fixed;
     top: 0;
-    left: -95.5vw;
+    left: -95.9vw;
     width: 100vw;
     height: 100vh;
     z-index: 99;

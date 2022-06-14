@@ -107,76 +107,50 @@ $$(`.play-button`).forEach((el) =>
                             transition= {{ duration: 1 }}
                      >
                      <div id="LeftBar">
-                            <div>
+                            <div id="logo-cont">
                                    <img src={LogoAzul} />
                             </div>
-                            <aside>
-                                   <img src='/assets/aceituna.svg'/>
-                            </aside>
+                            
                             <div id="videos-home">
                                    <ul>
                                           {proyectos_destacados.map( (proyecto) => (
                                                  <Link to={`/project/${proyecto.id}`}>
-                                                        {/* <br /> */}
                                                         <li data-id={proyecto.id} data-title={proyecto.nombre} onMouseOver={ (e)=>{selectProject(e)}} className={proyecto.id == activeProject && "video-selected"} >
                                                                <div>
-                                                                             <p>{proyecto.nombre} </p>
-                                                                             
-                                                                             <aside>
-                                                                             <span>{proyecto.nombre}</span>
-                                                                             <span className="dots">●</span>
-                                                                             <span className="proy-descr">{proyecto.descr}</span>
-                                                                             <span className="dots">●</span>
-                                                                             <span>{proyecto.nombre}</span>
-                                                                             <span className="dots">●</span>
-                                                                             <span className="proy-descr">{proyecto.descr}</span>
-                                                                             <span className="dots">●</span>
-                                                                             <span>{proyecto.nombre}</span>
-                                                                             <span className="dots">●</span>
-                                                                             <span className="proy-descr"> {proyecto.descr}</span>
-                                                                             <span className="dots">●</span>
-                                                                             <span>{proyecto.nombre}</span>
-                                                                             <span className="dots">●</span>
-                                                                             <span className="proy-descr">{proyecto.descr}</span>
-                                                                             <span className="dots">●</span>
-                                                                             </aside>
-
+                                                                      <p data-text={proyecto.nombre}>{proyecto.nombre} </p>
                                                                </div>
                                                         </li>
+                                                               <div className="info-project">
+                                                                      <div className="description">
+                                                                             <span>{proyecto.descr}</span>
+                                                                      </div>
+                                                                      <div className="read-more">
+                                                                             <span>Read more</span>
+                                                                             <img src="/assets/down.png" />
+                                                                      </div>
+                                                               </div>
+                                                        <br />
                                                  </Link>
                                           ) )
                                           }
                                    </ul>
-                                   <Link to='/projects'>
-                                          <button><span>MORE WORK</span><img src="./assets/down.png" height={16}/></button>
-                                   </Link>
                             </div>
                      </div>
 
                      
-                     <div id="play-project" className="play-button">
-                            <div>
-                                   <img src={GiraGira}/>
-                                   <div>▶</div>
-                            </div>
-                     </div>
 
                      <div id="info-video">
-                            <div>
-                                   <div id="">
-                                          <span>{infoProject.descr}</span>
-                                          <h1>{infoProject.nombre}</h1>
-                                   </div>
+                            <div id="dale-play" onClick={()=>{setFullVideo(false)}} >
                                    <div>
-                                          <button onClick={ ()=>{setFullVideo(false)} }>PLAY ></button>
+                                          <span>►</span>
+                                          <p>Watch now</p>
                                    </div>
                             </div>
-                            <div>
+                            <div id="more-work-cont">
                                    <div>
-                                          <p>MORE WORK ></p>
-                                   </div>
-                                   <div>
-                                          <p data-id={nextProject.id} onClick={ (e)=>{selectProject(e)}} >{nextProject.nombre} ></p>
+                                          <p>MORE WORK</p>
+                                          {/* <img src="/assets/down.png" /> */}
+                                          <aside id="section10" class="scrollbutton"><a href="#"><span></span></a></aside>
                                    </div>
                             </div>
                      </div >
