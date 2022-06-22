@@ -116,7 +116,9 @@ const menu_items = {
                                 </aside>
                                 <div id="iconCont">
                                     <img src="/assets/miscelanias/todas/Miscelaneas Vermú_Mesa de trabajo 1 copia 29.svg" />
-
+                                </div>
+                                <div id="aceituna-cont">
+                                    <img src="/assets/aceituna.svg" />
                                 </div>
                             </motion.div>
                         </>

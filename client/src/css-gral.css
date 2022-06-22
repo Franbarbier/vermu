@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Exo:wght@100;300&family=Georama:wght@200;300;400;600;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Exo:wght@100;300&family=Georama:wght@200;300;400;600;900&display=swap');
 
+@font-face {
+	font-family: 'Ainsdale';
+	src: local('Ainsdale'), url('../public/assets/Ainsdale/Ainsdale Medium.otf') format('OpenType');
+  }
 
 :root {
 	--azul: #28353E;

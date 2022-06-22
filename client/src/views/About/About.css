@@ -23,10 +23,21 @@ html{
 #logo-blanco{
     filter: invert(1);
     transform: translate(-51.5%, -2%);
+    animation: sombra1 .3s 2s ease-in-out forwards;
 }
 #logo-negro{
     transform: translate(-49.5%, 2%);
-    filter: brightness(0);
+    filter: brightness(0.5);
+    animation: sombra2 .3s 2s ease-in-out forwards;
+}
+
+@keyframes sombra1 {
+  0%{ transform:  translate(-51.5%, -2%); }
+  100%{ transform:  translate(-50.5%, -1%); }
+}
+@keyframes sombra2 {
+  0%{ transform:  translate(-49.5%, 2%); }
+  100%{ transform:  translate(-49%, 1%); }
 }
 #leer-mas-about{
     margin: auto;
