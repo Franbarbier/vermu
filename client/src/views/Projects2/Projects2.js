@@ -52,6 +52,18 @@ const Projects2 = ({setActiveTab}) => {
                      </ul>
 
                     </main>
+                    <aside id="mise-cont">
+                    {Array.apply(null, { length: 15 }).map((e, i) => (
+                        <div
+                            className={`anim${Math.floor(Math.random() * (4 - 1 + 1)) + 1}`}
+                            style={{ 'top': `${Math.floor(Math.random() * (100 - 1 + 1)) + 1}%`,  'left': `${Math.floor(Math.random() * (100 - 1 + 1)) + 1}%`,'animationDelay': `${Math.floor(Math.random() * (4 - 1 + 1)) + 1}s` }}
+                        >
+                            <img
+                                src={`/assets/miscelanias/todas/Miscelaneas Vermú_Mesa de trabajo 1 copia ${ Math.floor(Math.random() * (104 - 1 + 1)) + 1}.svg`}
+                            />
+                        </div>
+                    ))}
+                    </aside>
                     
                     <RightBar activePage="Work" />
 

@@ -133,7 +133,7 @@
 
   #mise-cont>div{
     position: absolute;
-    width: 40px;
+    width: 70px;
 
   }
   #mise-cont img{
@@ -144,7 +144,7 @@
       animation: 5s animm1 ease-in-out infinite;
   }
   .anim2{
-      animation: 7s animm2 ease-in-out infinite;
+      animation: 5s animm2 ease-in-out infinite;
   }
   .anim3{
       animation: 3s animm3 ease-in-out infinite;
@@ -159,15 +159,21 @@
     100%{ opacity: 1 }
   } 
 
-  @keyframes animm2 {
+  /* @keyframes animm2 {
     0%{ transform: translate(0%, -0%) }
     50%{ transform: translate(80px, 150px) }
     100%{ transform: translate(0%, -0%) }
+  }  */
+  @keyframes animm2 {
+    0%{ transform: rotate(0deg) }
+    20%{ transform: rotate(360deg) }
+    40%{ transform: rotate(0deg) }
+    100%{ transform: rotate(0deg) }
   } 
   @keyframes animm4 {
-    0%{ transform: translate(0%, -0%) }
-    50%{ transform: translate(-130px, 30px) }
-    100%{ transform: translate(0%, -0%) }
+    0%{ transform: scale(0.8) }
+    50%{ transform: scale(1.15) }
+    100%{ transform: scale(0.8) }
   } 
 
   @keyframes animm3 {
