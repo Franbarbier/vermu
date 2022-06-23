@@ -25,7 +25,9 @@
     cursor: pointer;
     float: right;
     z-index: 199;
-    margin: 30% 30% 0 0;
+    position: fixed;
+    top: 2%;
+    right: 0.9vw;
 }
 #menu-bars>div{
     width: 100%;
