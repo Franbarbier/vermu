@@ -25,6 +25,7 @@
     cursor: pointer;
     float: right;
     z-index: 199;
+    margin: 30% 30% 0 0;
 }
 #menu-bars>div{
     width: 100%;
@@ -70,11 +71,11 @@
     display: block;
     margin: auto 4.5px;
 }
-#RightBar-view ul{
+#new-menu ul{
     width: 50vw;
     margin: 15% auto;
 }
-#RightBar-view ul li{
+#new-menu ul li{
     text-align: center;
     transition-duration: .2s;
     cursor: pointer;
@@ -86,18 +87,23 @@
     color: #fff;
     z-index: 2;
 }
-#RightBar-view ul li:nth-child(odd){
+#new-menu ul a{
+    display: block;
+    z-index: 2;
+    position: relative;
+}
+#new-menu ul a:nth-child(odd){
     transform: translateX(5%);
 }
-#RightBar-view ul li:nth-child(even){
+#new-menu ul a:nth-child(even){
     transform: translateX(-5%);
 }
-#RightBar-view ul li:nth-child(odd):hover{
+#new-menu ul a:nth-child(odd):hover li{
     font-weight: 600;
     font-style: italic;
     animation: liMove1 1s cubic-bezier(.16,.53,.07,1.01) forwards;
 }
-#RightBar-view ul li:nth-child(even):hover{
+#new-menu ul a:nth-child(even):hover li{
     font-weight: 600;
     font-style: italic;
     animation: liMove2 1s cubic-bezier(.16,.53,.07,1.01) forwards;
@@ -113,11 +119,11 @@
 
 
  
-#RightBar-view ul li.activeTab{
+#new-menu ul li.activeTab{
     color: var(--azul);
     font-weight: 600;
 }
-#RightBar-view ul li.activeTab:after{
+#new-menu ul li.activeTab:after{
     content: '';
     border-radius: 50%;
     width: 6px;
@@ -134,7 +140,7 @@
 #new-menu{
     position: fixed;
     top: 0;
-    left: -95.9vw;
+    left: 0;
     width: 100vw;
     height: 100vh;
     z-index: 99;

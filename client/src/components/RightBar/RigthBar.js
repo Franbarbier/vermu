@@ -47,16 +47,17 @@ const menu_items = {
   function render(){
     // style={{ 'width': menu && '15vw' }} 
     //   return  <motion.div id="RightBar-view" animate={menu ? "abierto" : 'cerrado'} variants={menu_status}  >
-      return  <motion.div id="RightBar-view" >
-            
-            <div>
-
-                    <div>
+      return <div>  
                         <div id="menu-bars" onClick={ abrirMenu }>
                             {/* <img src="" /> */}
                             <div className={menu && "rayas-menos"} id="barra-uno"></div>
                             <div className={menu && "rayas-menos"} id="barra-dos"></div>
                         </div>
+      <motion.div id="RightBar-view" >
+            
+            <div>
+
+                    <div>
                         
 
                 </div>
@@ -72,7 +73,9 @@ const menu_items = {
                 </div>
              </div>
 
-                {menu &&
+               
+              </motion.div>
+              {menu &&
                         <>
                                 <motion.div
                                     style={{
@@ -80,7 +83,7 @@ const menu_items = {
                                         'width': '100vw',
                                         'position': 'fixed',
                                         'top': '0',
-                                        'left': '-95.5vw',
+                                        'left': '0',
                                         'backgroundColor': '#ddd',
                                         'zIndex': '80'
                                     }}
@@ -97,10 +100,10 @@ const menu_items = {
                              transition={{ duration: 0.7, delay: 0.5}}
                              id="new-menu">
                                 <ul>
-                                    <li><Link to="/">Home</Link></li>
-                                    <li><Link to="/projects">Work</Link></li>
-                                    <li><Link to="/about">Us</Link></li>
-                                    <li><Link to="/contact">Contact</Link></li>
+                                    <Link to="/"><li>Home</li></Link>
+                                    <Link to="/projects"><li>Work</li></Link>
+                                    <Link to="/about"><li>Us</li></Link>
+                                    <Link to="/contact"><li>Contact</li></Link>
                                 </ul>
                                 <aside>
                                     <div>
@@ -123,7 +126,7 @@ const menu_items = {
                             </motion.div>
                         </>
                     }
-              </motion.div>
+              </div>
 
        }
        
