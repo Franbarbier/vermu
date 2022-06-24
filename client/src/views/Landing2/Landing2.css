@@ -450,6 +450,7 @@ aside path{
 }
 .info-project {
     white-space: nowrap;
+    display: none;
 }
 
 #section10{
