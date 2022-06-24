@@ -17,7 +17,7 @@ export const bbdd_proyectos = [
            img_destacada : '',
            video: 'Lengas Billetera.mp4',
            long_descr: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-           staff: [{'Producción':'Ana Arancedo','Camaras':'Rafael Kogan, Santiago Chaher, Pablo Sculati, Francisco Albinati','Camaras B':'Felipe Sigwald, Ornella Disalvo, Ana Arancedo', 'Edición':'Pablo Sculati, Santiago Chaher'}],
+           staff: [{'Producción':'Ana Arancedo'},{'Camaras':'Rafael Kogan, Santiago Chaher, Pablo Sculati, Francisco Albinati'},{'Camaras B':'Felipe Sigwald, Ornella Disalvo, Ana Arancedo'}, {'Edición':'Pablo Sculati, Santiago Chaher'}],
            imgs: ["https://images.pexels.com/photos/2872667/pexels-photo-2872667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940","https://images.pexels.com/photos/2872667/pexels-photo-2872667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940","https://images.pexels.com/photos/2872667/pexels-photo-2872667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"]
 
 
@@ -41,7 +41,7 @@ export const bbdd_proyectos = [
            img_destacada : '',
            video: 'hood-vid.mp4',
            long_descr: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-           staff: [{'Direccion y edición':'Rafael Kogan','Producción':'Ana Arancedo','Asistencia':'Felipe Sigwald'}],
+           staff: [{'Direccion y edición':'Rafael Kogan'},{'Producción':'Ana Arancedo','Asistencia':'Felipe Sigwald'}],
            imgs: ["https://images.pexels.com/photos/2872667/pexels-photo-2872667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940","https://images.pexels.com/photos/2872667/pexels-photo-2872667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940","https://images.pexels.com/photos/2872667/pexels-photo-2872667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"]
 
 
@@ -53,7 +53,7 @@ export const bbdd_proyectos = [
        img_destacada : '',
        video: 'Lengas Reloj.mp4',
        long_descr: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-       staff: [{'Producción':'Ana Arancedo','Camaras':'Rafael Kogan, Valentin Caride, Felipe Escalada.','Asistencia':'Ornella Disalvo, Felipe Sigwald', 'Edición': 'Rafael Kogan'}],
+       staff: [{'Producción':'Ana Arancedo'},{'Camaras':'Rafael Kogan, Valentin Caride, Felipe Escalada.'},{'Asistencia':'Ornella Disalvo, Felipe Sigwald'},{ 'Edición': 'Rafael Kogan'}],
            imgs: ["https://images.pexels.com/photos/2872667/pexels-photo-2872667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940","https://images.pexels.com/photos/2872667/pexels-photo-2872667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940","https://images.pexels.com/photos/2872667/pexels-photo-2872667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"]
 
 
@@ -65,7 +65,7 @@ export const bbdd_proyectos = [
        img_destacada : '',
        video: 'hood-vid.mp4',
        long_descr: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-       staff: [{'Direccion y edición':'Rafael Kogan','Producción':'Luciano Peverelli','Asistencia':'Felipe Sigwald'}],
+       staff: [{'Direccion y edición':'Rafael Kogan'},{'Producción':'Luciano Peverelli'},{'Asistencia':'Felipe Sigwald'}],
            imgs: ["https://images.pexels.com/photos/2872667/pexels-photo-2872667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940","https://images.pexels.com/photos/2872667/pexels-photo-2872667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940","https://images.pexels.com/photos/2872667/pexels-photo-2872667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"]
 
 
@@ -77,7 +77,7 @@ export const bbdd_proyectos = [
               img_destacada : '',
               video: 'hood-vid.mp4',
               long_descr: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-              staff: [{'Direccion y edición':'Rafael Kogan','Producción':'Ana Arancedo','DF':'Lucas Dominguez','Gaffer':'Manuel Renner'}],
+              staff: [{'Direccion y edición':'Rafael Kogan'},{'Producción':'Ana Arancedo'},{'DF':'Lucas Dominguez'},{'Gaffer':'Manuel Renner'}],
                   imgs: ["https://images.pexels.com/photos/2872667/pexels-photo-2872667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940","https://images.pexels.com/photos/2872667/pexels-photo-2872667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940","https://images.pexels.com/photos/2872667/pexels-photo-2872667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"]
 
        },
@@ -88,7 +88,7 @@ export const bbdd_proyectos = [
               img_destacada : '',
               video: 'Lengas Reloj.mp4',
               long_descr: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-              staff: [{'Direccion y edición':'Rafael Kogan','Producción':'Ana Arancedo','DF':'Lucas Dominguez','Gaffer':'Manuel Renner'}],
+              staff: [{'Direccion y edición':'Rafael Kogan'},{'Producción':'Ana Arancedo'},{'DF':'Lucas Dominguez'},{'Gaffer':'Manuel Renner'}],
                      imgs: ["https://images.pexels.com/photos/2872667/pexels-photo-2872667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940","https://images.pexels.com/photos/2872667/pexels-photo-2872667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940","https://images.pexels.com/photos/2872667/pexels-photo-2872667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"]
        
        
@@ -100,7 +100,7 @@ export const bbdd_proyectos = [
        img_destacada : '',
        video: 'Untitled.mp4',
        long_descr: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-       staff: [{'Direccion y edición':'Rafael Kogan','Producción':'Ana Arancedo','DF':'Lucas Dominguez','Gaffer':'Manuel Renner'}],
+       staff: [{'Direccion y edición':'Rafael Kogan'},{'Producción':'Ana Arancedo'},{'DF':'Lucas Dominguez'},{'Gaffer':'Manuel Renner'}],
            imgs: ["https://images.pexels.com/photos/2872667/pexels-photo-2872667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940","https://images.pexels.com/photos/2872667/pexels-photo-2872667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940","https://images.pexels.com/photos/2872667/pexels-photo-2872667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"]
 
 

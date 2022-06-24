@@ -173,8 +173,8 @@ function listenToScroll() {
                             
                             <div id="videos-home">
                                    <ul>
-                                          {proyectos_destacados.map( (proyecto) => (
-                                                 <Link to={`/project/${proyecto.id}`}>
+                                          {proyectos_destacados.map( (proyecto, index) => (
+                                                 <Link to={`/project/${index}`}>
                                                         <li data-id={proyecto.id} data-title={proyecto.nombre} onMouseOver={ (e)=>{selectProject(e)}} className={proyecto.id == activeProject && "video-selected"} >
                                                                <div>
                                                                       <p data-text={proyecto.nombre}>{proyecto.nombre} </p>

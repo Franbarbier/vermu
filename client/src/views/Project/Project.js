@@ -6,6 +6,9 @@ import RightBar from '../../components/RightBar/RigthBar';
 import {bbdd_proyectos} from '../../global-func'
 import LogoAzul from '../../components/LogoAzul/LogoAzul.svg'
 
+import { motion, AnimatePresence } from "framer-motion";
+
+
 import './Project.css';
 
 
@@ -18,6 +21,8 @@ const Project = ({setActiveTab}) => {
 
        const more_work = bbdd_proyectos.slice(0,5)
 
+       console.log(proyecto)
+
   function render(){
       return  <div id="Project-view">
                      <a href="/">
@@ -29,9 +34,31 @@ const Project = ({setActiveTab}) => {
                                    
                             </div>
                             <div id="project-info">
-                                   <h3>{proyecto.nombre}</h3>
-                                   <p>{proyecto.descr}</p>
-                                   <button>See more</button>
+                                   <div>
+                                          <motion.h3
+                                                 initial={{ opacity: 0, y: 30 }}
+                                                 animate={{ opacity: 1, y: 0 }}
+                                                 // exit={{ opacity: 0 }}
+                                                 transition= {{ duration: 1,  ease: [0.26, 1.03, 0, 1] }}
+                                          >{proyecto.nombre}</motion.h3>
+                                   </div>
+                                   <div>
+                                          <motion.p
+                                                 initial={{ opacity: 0, y: 30 }}
+                                                 animate={{ opacity: 1, y: 0 }}
+                                                 // exit={{ opacity: 0 }}
+                                                 transition= {{ duration: 1,  ease: [0.26, 1.03, 0, 1], delay: 0.4 }}
+                                          >{proyecto.descr}</motion.p>
+                                   </div>
+                                   <div>
+                                          <motion.button
+                                                 initial={{ opacity: 0, y: 30 }}
+                                                 animate={{ opacity: 1, y: 0 }}
+                                                 // exit={{ opacity: 0 }}
+                                                 transition= {{ duration: 1,  ease: [0.26, 1.03, 0, 1], delay: 0.7 }}
+                                                 onClick={ ()=>{ document.querySelector('#more-work').scrollIntoView({behavior: "smooth"}) } }
+                                          >See more</motion.button>
+                                   </div>
                             </div>
 
                     </main>
@@ -40,40 +67,114 @@ const Project = ({setActiveTab}) => {
                           
                             <div id="project-description">
                                           <div>
-                                                 <h5>DESCRIPTION</h5>
-                                                 <p>{proyecto.long_descr}</p>
+                                                 <motion.h5
+                                                        initial={{ opacity: 0, y: 20 }}
+                                                        whileInView={{ opacity: 1, y: 0 }}
+                                                        viewport={{ once: true }}
+                                                        transition= {{ duration: 2, 
+                                                                      ease: [0.26, 1.03, 0, 1],
+                                                                      delay: 0.7,
+                                                                      bounce: 1
+                                                                      }}
+                                                 >DESCRIPTION</motion.h5>
+                                                 <motion.p 
+                                                        initial={{ opacity: 0, y: 20 }}
+                                                        whileInView={{ opacity: 1, y: 0 }}
+                                                        viewport={{ once: true }}
+                                                        transition= {{ duration: 2, 
+                                                                      ease: [0.26, 1.03, 0, 1],
+                                                                      delay: 1.2,
+                                                                      bounce: 1
+                                                                      }}
+                                                 >{proyecto.long_descr}</motion.p>
                                                  
-                                                 {proyecto.staff.map((staff)=>(
-                                                        <>
+                                                 {proyecto.staff.map((staff, index)=>(
+                                                        <motion.div
+                                                               initial="hidden"
+                                                               whileInView="show"
+                                                               viewport={{ once: true }}
+                                                               variants={{
+                                                                      hidden: { opacity: 0, y: 10 },
+                                                                      show: { opacity: 1, y: 0 }
+                                                               }}
+                                                               transition= {{ duration: 2, 
+                                                                      ease: [0.26, 1.03, 0, 1],
+                                                                      delay: ( index*2/10 + 1.7),
+                                                                      bounce: 1
+                                                               }}
+                                                        >
                                                                <br />
                                                                <br />
                                                                <span>{Object.keys(staff)}</span>: <span className="tagRole">{Object.values(staff)}</span>
-                                                        </>
+                                                        </motion.div>
                                                  ))}
                                           </div>
                                           <div>
-                                                 <h5>BACK</h5>
+                                                 <motion.h5
+                                                        initial={{ opacity: 0, y: 20 }}
+                                                        whileInView={{ opacity: 1, y: 0 }}
+                                                        viewport={{ once: true }}
+                                                        transition= {{ duration: 2, 
+                                                                      ease: [0.26, 1.03, 0, 1],
+                                                                      delay: 0.7,
+                                                                      bounce: 1
+                                                                      }}
+                                                 >BACK</motion.h5>
                                                  
                                                  {proyecto.imgs.map((img)=>(
-                                                        <img src={img} />
+                                                        <motion.img
+                                                               initial={{ opacity: 0, y: 10 }}
+                                                               whileInView={{ opacity: 1, y: 0 }}
+                                                               viewport={{ once: true }}
+                                                               transition= {{ duration: 3, 
+                                                                             ease: [0.26, 1.03, 0, 1],
+                                                                             delay: 0.5,
+                                                                             bounce: 1
+                                                                             }}
+                                                               src={img} />
                                                  ))}
                                           </div>
                             </div>
                             <div id="projects-related">
                                    <div>
-                                          <h5>MORE WORK</h5>
-                                          <ul>
+                                                 <motion.h5
+                                                        initial={{ opacity: 0, y: 20 }}
+                                                        whileInView={{ opacity: 1, y: 0 }}
+                                                        viewport={{ once: true }}
+                                                        transition= {{ duration: 2, 
+                                                                      ease: [0.26, 1.03, 0, 1],
+                                                                      delay: 0.7,
+                                                                      bounce: 1
+                                                                      }}
+                                                 >MORE WORK</motion.h5>
+                                         <ul>
                                                  {more_work.map((project, index)=>(
                                                         index != id &&
-                                                        <li>
+                                                        <motion.li
+                                                               initial="hidden"
+                                                               whileInView="show"
+                                                               viewport={{ once: true }}
+                                                               variants={{
+                                                                      hidden: { opacity: 0, y: 10 },
+                                                                      show: { opacity: 1, y: 0 }
+                                                               }}
+                                                               transition= {{ duration: 2, 
+                                                                      ease: [0.26, 1.03, 0, 1],
+                                                                      delay: ( index*2/10 + 1.7),
+                                                                      bounce: 1
+                                                               }}
+
+                                                        >
                                                                <div className="thumb-related">
-                                                                      <img src={project.imgs[0]} />
+                                                                      {/* <img src={project.imgs[0]} /> */}
+                                                                      <video width="100%" controls={false} pause src={"/assets/videos/"+project.video} />
+
                                                                </div>
                                                                <div>
                                                                       <h6>{project.nombre}</h6>
                                                                       <p>{project.descr}</p>
                                                                </div>
-                                                        </li>                                                        
+                                                        </motion.li>                                                        
                                                  ))
 
                                                  }
