@@ -418,3 +418,57 @@ aside path{
     transform: scaleX(1);
     transform-origin: left;
 } */
+
+@media (max-width: 800px) {
+
+#banner svg{
+    left: 50vw;
+    transform: translate(-50%, 150%) scale(2.2);
+    width: 40vw;
+}
+#banner{
+    animation-duration: 35s!important;
+}
+
+#scroll-more{
+    bottom:7%
+}
+#scroll-more span {
+    margin-bottom: 70%;
+    font-size: 1.1em;
+}
+#videos-home ul {
+    margin-top: 17%;
+    margin-left: 3%;
+}
+#LeftBar li {
+    font-size: 10vh;
+    margin: 1% 0px;
+}
+#LeftBar li p{
+    white-space: nowrap;
+}
+.info-project {
+    white-space: nowrap;
+}
+
+#section10{
+    display: none;
+}
+#more-work-cont {
+    position: absolute;
+    left: 5%;
+    transform: none;
+    bottom: 5%;
+}
+#more-work-cont p{
+    margin-bottom: 0%;
+    font-size: 1.1em;
+    transform: none;
+}
+#dale-play{
+    transform: translateY(-25%);
+    bottom: 5%;
+    top: inherit;
+}
+}
