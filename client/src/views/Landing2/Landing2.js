@@ -180,15 +180,15 @@ function listenToScroll() {
                                                                       <p data-text={proyecto.nombre}>{proyecto.nombre} </p>
                                                                </div>
                                                         </li>
-                                                               <div className="info-project">
-                                                                      <div className="description">
-                                                                             <span>{proyecto.descr}</span>
-                                                                      </div>
-                                                                      <div className="read-more">
-                                                                             <span>Read more</span>
-                                                                             <img src="/assets/down.png" />
-                                                                      </div>
+                                                        <div className="info-project">
+                                                               <div className="description">
+                                                                      <span>{proyecto.descr}</span>
                                                                </div>
+                                                               <div className="read-more">
+                                                                      <span>Read more</span>
+                                                                      <img src="/assets/down.png" />
+                                                               </div>
+                                                        </div>
                                                         <br />
                                                  </Link>
                                           ) )

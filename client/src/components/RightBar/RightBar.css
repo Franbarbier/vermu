@@ -52,7 +52,7 @@
 #rrss>div{
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center
 }
 #rrss>div a{
     display: flex;
@@ -224,4 +224,18 @@
     100% {
         transform: translateY(0%);
     }
+}
+
+@media (max-width: 800px) {
+#menu-bars{
+    width: 7vw;
+    right: 2.5%;
+}
+#RightBar-view{
+    width: 7vw;
+    padding: 2vh 10px 3vh 10px;
+    height: 15%
+}
+
+
 }
