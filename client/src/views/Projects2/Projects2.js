@@ -27,9 +27,24 @@ const Projects2 = ({setActiveTab}) => {
                             >Our work</motion.h2>
                      </header>
                      <ul>
-                            {bbdd_proyectos.map((proyecto)=>(
-                                   <li onMouseEnter={ (e)=>{  e.target.play() } } onMouseLeave={ (e)=>{  e.target.pause() } }>
-                                          <Link to={`/project/${proyecto.id}`} >
+
+                            {bbdd_proyectos.map((proyecto, index)=>(
+                                   <motion.li 
+                                          initial={{ 
+                                                 opacity: 0,
+                                                 y: 10,
+                                          }}
+                                          whileInView={{ 
+                                                 opacity: 1,
+                                                 y: 0,
+                                                 transition: { 
+                                                        duration: 1
+                                                 }
+                                          }}
+                                          
+                                          viewport={{ once: true }}
+                                          onMouseEnter={ (e)=>{  e.target.play() } } onMouseLeave={ (e)=>{  e.target.pause() } }>
+                                          <Link to={`/project/${index}`} >
                                           <div>
                                                  <div className="videos-cont">
                                                         <video muted loop controls={ false } src={"/assets/videos/"+proyecto.video} />
@@ -47,7 +62,7 @@ const Projects2 = ({setActiveTab}) => {
                                                  </div>
                                           </div>
                                           </Link>
-                                   </li>
+                                   </motion.li>
                             ))}
                      </ul>
 

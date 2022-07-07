@@ -16,6 +16,8 @@ const Contact = ({setActiveTab}) => {
        const [joinUs, setJoinUs] = useState(false)
 
 
+function efectoDa1(str){ return Array.from(str) }
+
   function render(){
       return  <div id="Contact-view">
                      <a href="/">
@@ -23,21 +25,29 @@ const Contact = ({setActiveTab}) => {
                      </a>
                      <div>
                             <div id="data-contact">
-                                   <h5>CONTACT</h5>
+                                   <h5>GET IN TOUCH</h5>
                                    <div>
-                                          <a href="https://wa.me/5491134536136" target="_blank">
-                                                 <h3>+54 9 11345-6136</h3>
-                                          </a>
-                                          <a href="mailto:vermu@gmail.com?subject=Hi%20Vermu!">
-                                                 <h3>vermu@gmail.com</h3>
-                                          </a>
+                                          <div>
+                                                 <span>email us at </span>
+                                                 <a href="https://wa.me/5491144097065" target="_blank">{efectoDa1('(+54) 9 11 4409-7065').map((letra, index)=>(
+                                                        <div data-letra={letra} style={{'transition-delay': `${index/30}s`}}>{letra}</div>
+                                                 ))}</a>
+                                          </div>
+                                          <div>
+                                                 <span>or text us at </span>
+                                                 <a href="mailto:vermu@gmail.com?subject=Hi%20Vermu!">{efectoDa1('vermu@gmail.com').map((letra, index)=>(
+                                                        <div data-letra={letra} style={{'transition-delay': `${index/30}s`}}>{letra}</div>
+                                                 ))}</a>
+                                          </div>
+
+
                                    </div>
 
                             </div>
-                            <div id="wanna" className={joinUs ? 'joineate' : 'nojoin'}>
+                            <div id="wanna" className={`nojoin ${joinUs && 'ahorasi'}`}>
                                    <aside onClick={()=>{ setJoinUs(false) }}>x</aside>
                                    <h6 onClick={()=>{ setJoinUs(true) }}>Want to<br />join us?</h6>
-                                   <span>Send us your portfolio at</span> <a href="mailto:joinus@vermu.com?subject=Want%20to%20join%20you!">joinus@vermu.com</a>
+                                   <span>Send us your portfolio at  </span><i><a href="mailto:vermuproductions@gmail.com?subject=Want%20to%20join%20you!"> vermuproductions@gmail.com</a></i>
                             </div>
                      </div>
                     

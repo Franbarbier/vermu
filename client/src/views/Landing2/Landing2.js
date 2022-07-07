@@ -89,9 +89,10 @@ $$(`.play-button`).forEach((el) =>
 
 
 setTimeout(() => {
-      for (let index = 0; index < document.querySelectorAll('aside path').length; index++) {
-       const element = document.querySelectorAll('aside path')[index];
+      for (let index = 0; index < document.querySelectorAll('#logo-achique path').length; index++) {
+       const element = document.querySelectorAll('#logo-achique path')[index];
        element.style.fill = '#28353e'
+       element.style.fill = 'wheat'
        element.style.filter = 'drop-shadow(2px 4px 6px #00000078)'
       }
 }, 100);
@@ -114,11 +115,15 @@ useEffect(()=>{
        if (scrollNow) {
               // document.querySelector('body').style.overflow = 'hidden'
               window.scrollTo(0,document.body.scrollHeight);
-              document.querySelector('#banner svg').style.transform = 'translate(-50%, -10%) scale(1)';   
+              document.querySelector('#logo-achique').style.transform = 'translate(-50%, -10%) scale(1)';   
+              document.querySelector('#banner').style.filter = 'blur(130px)';   
               setTimeout(() => {
-                     document.querySelector('#banner').style.height = '0';   
-                     
-              }, 800);
+                     document.querySelector('#banner').style.opacity = '0';   
+                     setTimeout(() => {
+                            document.querySelector('#banner').style.height = '0';  
+                            document.querySelector('#bannerVacio').style.height = '0';   
+                     }, 500);
+              }, 300);
        }
 }, [scrollNow])
        
@@ -136,12 +141,21 @@ function listenToScroll() {
        })
      }
 
+function toProjects(){
+
+       document.querySelector('#scroll-h').style.filter = 'brightness(0)';
+       
+       setTimeout(() => {
+              // window.location.href = "/projects";
+              document.location.href = '/projects'
+       }, 500);
+}
 
 
   function render(){
       return  <div id="Landing2-view">
+                     <aside id="bannerVacio" style={{'height':'100vh'}} ></aside>
                      <aside id="banner">
-                            <Logo1 className="someClassThatWillBeUsedInCSS" alt="icon" />
                             <div id="scroll-more" onClick={ ()=>{ setScrollNow(true) } }>
                                    <span>VIEW MORE</span>
                                    <div id="scroll-btn">
@@ -149,6 +163,7 @@ function listenToScroll() {
                                    </div>
                             </div>
                      </aside>
+                     <Logo1 id="logo-achique" alt="icon" />
               {/* <Loader /> */}
                     <div id="scroll-h">
                      <div id="video-cont">
@@ -173,7 +188,24 @@ function listenToScroll() {
                             
                             <div id="videos-home">
                                    <ul>
+                                          <AnimatePresence>
+                                          
                                           {proyectos_destacados.map( (proyecto, index) => (
+                                                 <motion.div
+                                                        initial={{ 
+                                                               opacity: 0,
+                                                               x: -10,
+                                                        }}
+                                                        whileInView={{ 
+                                                               opacity: 1,
+                                                               x: 0,
+                                                               transition: { 
+                                                                      delay: 0.5+ index * 1.1,duration: 1
+                                                                }
+                                                         }}
+                                                        
+                                                        viewport={{ once: true }}
+                                                 >
                                                  <Link to={`/project/${index}`}>
                                                         <li data-id={proyecto.id} data-title={proyecto.nombre} onMouseOver={ (e)=>{selectProject(e)}} className={proyecto.id == activeProject && "video-selected"} >
                                                                <div>
@@ -191,8 +223,11 @@ function listenToScroll() {
                                                         </div>
                                                         <br />
                                                  </Link>
+                                                 </motion.div>
+
                                           ) )
                                           }
+                                   </AnimatePresence>
                                    </ul>
                             </div>
                      </div>
@@ -206,13 +241,13 @@ function listenToScroll() {
                                           <p>Watch now</p>
                                    </div>
                             </div>
-                            <Link to="/projects" id="more-work-cont">
+                            <div onClick={toProjects} to="/projects" id="more-work-cont">
                                    <div>
                                           <p>MORE WORK</p>
                                           {/* <img src="/assets/down.png" /> */}
                                           <aside id="section10" class="scrollbutton"><a href="#"><span></span></a></aside>
                                    </div>
-                            </Link>
+                            </div>
                      </div >
 
                      <RightBar activePage="Home" />

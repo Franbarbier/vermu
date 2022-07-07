@@ -1,6 +1,13 @@
-#Contact-view>main{
-    background-color: #272727;
-    min-height: 90vh;
+#Contact-view{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('/public/assets/gradient1.jpg');
+    background-size: 110% 100%;
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    transition: .2s;
+    animation: bckMove 10s ease-in-out infinite alternate;
+    overflow: hidden;
+    position: relative;
 }
 #Contact-view .logo{
     position: absolute;
@@ -13,41 +20,65 @@
 #data-contact{
     text-align: center;
     position: absolute;
-    top: 25%;
-    left: 20%;
-    width: 60%;
+    top: 15%;
+    left: 5%;
+    width: 90%;
 }
 #data-contact h5{
-    font-size: 13vw;
+    font-size: 8em;
     color: #ECECEC;
+    opacity: 0.2;
     font-weight: bold;
+    letter-spacing: 3px;
 }
 #data-contact>div{
-    transform: translateY(-200%);
+    margin: 5% auto;
+
 }
-#data-contact>div h3{
-    font-weight: 600;
-    font-size: 1.2em;
-    margin: 3%;
-    transition: .2s;
+#data-contact>div>div {
+    color: white;
+    margin: 4% auto;
+    font-size: 1.5em;
+
+}
+#data-contact>div>div a{
+    font-weight: 500;
+    display: inline-flex;
+    overflow: hidden;
+}
+#data-contact>div>div a div{
+    margin: 0 0.5px;
+    /* transition: 0.4s cubic-bezier(.77,-0.01,.29,1.02); */
+    transition: 0.9s cubic-bezier(.12,.68,.03,.98);
+    position: relative;
+}
+#data-contact>div>div a div:after{
+    content: attr(data-letra);
+    position: absolute;
+    right: 0%;
+    top: 100%;
+}
+#data-contact>div>div a:hover div, #data-contact>div>div a:hover  #data-contact>div>div a div::after{
+    transform: translateY(-100%);
 }
 #data-contact>div h3:hover{
-    letter-spacing: 5px;
+    /* letter-spacing: 5px; */
+    font-weight: 600;
 }
 
 #wanna{
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
-    bottom: 5%;
+    transform: translate(-50%, 57vh) scale(0.17);
+    top: 5%;
     text-align: center;
-    transition: .5s
+    transition: .5s;
+    width: 80%;
 }
 .nojoin h6{
     /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
-    -webkit-text-stroke: 1px  #272727;
     /* color: #fff; */
-    font-size: 1.75em;
+    font-size: 9.75em;
     letter-spacing: 3px;
     transition: .2s;
     transform-origin: 50% 100%;
@@ -62,9 +93,7 @@
 
 .nojoin h6 {
     
-
     background: -webkit-radial-gradient( #101010 10%, #fff 0%);
-    
     /* Set the background size and repeat properties. */
     background-size: 100%;
     background-repeat: repeat;
@@ -92,10 +121,10 @@
   /* Animation shown when entering the page and after the hover animation. */
   @keyframes rainbow-text-simple-animation-rev {
       0% {
-          background-size: 1000px 1000px;
+          background-size: 500vw 500vw;
       }
       40% {
-          background-size: 1000px 1000px;
+          background-size: 500vw 500vw;
       }
       100% {
           background-size: 100% 100%;
@@ -110,26 +139,15 @@
           
       }
       80% {
-          background-size: 1000px 1000px;
+          background-size: 400vw 400vw;
       }
       100% {
-          background-size: 1000px 1000px;
+          background-size: 500vw 500vw;
       }
   }
     
-.joineate {
-    transform: scale(5.5) translateX(-50%)!important;
-    transform-origin: 0% 115%!important;
-    background-color: #fff;
-}
-  
-.joineate h6{
-    color: #101010;
-    font-size: 1.75em;
-    letter-spacing: 3px;
-    transition: .2s;
-    transform-origin: 50% 100%;
-}
+
+
 #wanna span, #wanna a{
     font-size: 3px;
     display: none;
@@ -137,34 +155,70 @@
     transition: .3s 1s;
     margin-top: 3%;
 }
-.joineate span, .joineate a{
-    display: inline-block!important;
-    opacity: 1!important;
+
+
+
+#wanna.ahorasi{
+    transform: translatex(-50%);
+    background: #ffffff30;
+    border-radius: 30px;
+    padding-bottom: 5%;
+    border: 1px #ddd solid;
+    backdrop-filter: blur(8px);
+
 }
-.joineate a{
-    position: relative;
-    width: fit-content;
+#wanna.ahorasi span, #wanna.ahorasi a{
+    font-size: 2em;
+    color: #000000;
+    font-weight: 400;
+
 }
-.joineate a::before{
-    content: '';
-    width: 100%;
-    height: 2px;
-    display: block;
-    background: var(--azul);
-    bottom: -1px;
-    position: absolute;
-    z-index: -1;
-    transition: .1s;
+#wanna.ahorasi h6{
+    color: #101010!important;
+    background-size: 500vw 500vw!important;
+    cursor: inherit!important;
+
 }
-.joineate a:hover::before{
-    height: 4px;
-}
-.joineate aside{
-    position: absolute;
-    top: -1vh;
-    left: 50%;
-    transform: translateX(-50%);
+#wanna aside{
+    background: #fff;
+    border-radius: 50px;
+    box-shadow: 0px 3px 7px 1px #00000078;
+    font-weight: 600;
+    font-size: 31px;
+    padding: 4px 17px 10px;
+    text-align: center;
     cursor: pointer;
-    font-size: 5px;
+    display: none;
+    opacity: 0;
 }
-.nojoin aside{ display:none; }
+#wanna i{
+    margin-left: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 7;
+}
+#wanna a{
+    position: relative;
+    z-index: 6;
+}
+
+#wanna i::before{
+    position: absolute;
+    content: '';
+    top: 70%;
+    left: 0%;
+    width: 0%;
+    height: 9px;
+    background-image: url('../../../public/assets/gradient2.jpg');
+    background-size: 300%;
+    background-position: 50%;
+    transition-duration: .8s;
+    transition-timing-function: cubic-bezier(.8,.09,1,.44);
+    z-index: 1;
+
+}
+#wanna i:hover:before{
+    width: 100%;
+
+}
+#wanna.ahorasi aside, #wanna.ahorasi span, #wanna.ahorasi a{display:inline-block; opacity: 1}

@@ -13,6 +13,7 @@
     position: relative;
     overflow: hidden;
 }
+body{background-color: #000;}
 #Projects2-view>main{position:relative;z-index:2}
 #Projects2-view #mise-cont{
     position: absolute;
@@ -86,12 +87,13 @@
     background-color: #fff;
 }
 .txts-cont h4{
-    font-weight: 600;
+    font-weight: 300;
     color: #fff;
     letter-spacing: 3px;
     font-size: 2.5em;
     text-transform: uppercase;
     margin-top: 25%;
+    font-family: Ainsdale;
 }
 .txts-cont p{
     font-family: 'Exo';
@@ -128,9 +130,9 @@
 #Projects2-view main ul li button{
     font-family: 'Exo';
     background-color: transparent;
-    border: 1px solid #ddd;
+    border: none;
     color: #fafafa;
-    padding: 8px 30px;
+    padding: 8px 0;
     font-weight: 100;
     font-size: .75em;
     letter-spacing: 1px;
@@ -140,9 +142,8 @@
 }
 
 #Projects2-view main ul li:hover button{
-    background-color: #fafafa;
-    border-color: #fafafa;
-    color: black;
+    /* background-color: #fafafa;
+    border-color: #fafafa; */
     font-weight: 600;
     letter-spacing: 5px;
 }

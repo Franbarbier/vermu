@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import {useDispatch, useSelector} from 'react-redux';
 import { Link } from 'react-router-dom';
 
+import LogoAzul from '../../components/LogoAzul/LogoAzul.svg';
+
 
 import './RightBar.css';
 
@@ -85,13 +87,18 @@ const menu_items = {
                                         'top': '0',
                                         'left': '0',
                                         'backgroundColor': '#ddd',
-                                        'zIndex': '80'
+                                        'zIndex': '80',
+                                        'overflow': 'hidden'
                                     }}
                                     initial={{ y: "100vh"}}
                                     animate={{ y: 0 }}
                                     exit={{ y: "100vh"}}
                                     transition={{ duration: 0.7 }}
-                                />
+                                >
+                                    <span className='spanMenu'>
+                                        WE ARE VERMU
+                                    </span>
+                                </motion.div>
 
                             <motion.div
                              initial={{ y: "100vh"}}
@@ -99,11 +106,14 @@ const menu_items = {
                              exit={{ y: "100vh"}}
                              transition={{ duration: 0.7, delay: 0.5}}
                              id="new-menu">
+                                <div id="menu-logo">
+                                    <img src={LogoAzul} />
+                                </div>
                                 <ul>
-                                    <Link to="/"><li>Home</li></Link>
-                                    <Link to="/projects"><li>Work</li></Link>
-                                    <Link to="/about"><li>Us</li></Link>
-                                    <Link to="/contact"><li>Contact</li></Link>
+                                    <Link className={activePage == "Home" && 'activeTab'} to="/"><li data-text="HOME">Home</li></Link>
+                                    <Link className={activePage == "Work" && 'activeTab'} to="/projects"><li data-text="WORK">Work</li></Link>
+                                    <Link className={activePage == "Us" && 'activeTab'} to="/about"><li data-text="US">Us</li></Link>
+                                    <Link className={activePage == "Contact" && 'activeTab'} to="/contact"><li data-text="CONTACT">Contact</li></Link>
                                 </ul>
                                 <aside>
                                     <div>
@@ -119,6 +129,19 @@ const menu_items = {
                                 </aside>
                                 <div id="iconCont">
                                     <img src="/assets/miscelanias/todas/Miscelaneas Vermú_Mesa de trabajo 1 copia 29.svg" />
+                                </div>
+                                <div id="Cruz">
+                                    <img src="/assets/miscelanias/miscelanias (7).svg"/>
+                                </div>
+                                <div id="Resortin">
+                                    <div>
+                                        <div id="aro1"></div>
+                                        <div id="aro2"></div>
+                                        <div id="aro3"></div>
+                                        <div id="aro4"></div>
+                                        <div id="aro5"></div>
+                                    </div>
+                                
                                 </div>
                                 <div id="aceituna-cont">
                                     <img src="/assets/aceituna.svg" />

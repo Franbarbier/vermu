@@ -73,70 +73,84 @@
     display: block;
     margin: auto 4.5px;
 }
+#menu-logo{
+    position:absolute;
+    top: 0%;
+    width: 15vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#menu-logo img{
+    width: 100%;
+}
 #new-menu ul{
     width: 50vw;
-    margin: 15% auto;
+    margin: 12% auto;
+
+    display: flex;
+    flex-direction: column;
 }
 #new-menu ul li{
-    text-align: center;
-    transition-duration: .2s;
-    cursor: pointer;
-    margin: 1% 0;
-    padding: 1% 0;
     position: relative;
-    font-weight: 600;
-    font-size: 4em;
+    font-size: 15vh;
     color: #fff;
     z-index: 2;
+    font-family: Ainsdale;
+    text-transform: uppercase;
+    transition: 0.9s cubic-bezier(.77,-0.01,.29,1.02);
+
 }
 #new-menu ul a{
     display: block;
     z-index: 2;
     position: relative;
+    width: 50%;
+    overflow: hidden;
 }
 #new-menu ul a:nth-child(odd){
-    transform: translateX(5%);
+    align-self: flex-start;
+    text-align: right;
 }
 #new-menu ul a:nth-child(even){
-    transform: translateX(-5%);
+    align-self: flex-end;
+}
+#new-menu ul a:nth-child(odd) li:after{
+    content: attr(data-text);
+    position: absolute;
+    right: 0%;
+    top: 85%;
+    text-align: right;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+}
+#new-menu ul a:nth-child(even) li:after{
+    content: attr(data-text);
+    position: absolute;
+    left: 0%;
+    top: 85%;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
 }
 #new-menu ul a:nth-child(odd):hover li{
-    font-weight: 600;
+    /* font-weight: 600;
     font-style: italic;
-    animation: liMove1 1s cubic-bezier(.16,.53,.07,1.01) forwards;
+    animation: liMove1 1s cubic-bezier(.16,.53,.07,1.01) forwards; */
+    transform: translateY(-90%)
+
 }
 #new-menu ul a:nth-child(even):hover li{
-    font-weight: 600;
-    font-style: italic;
-    animation: liMove2 1s cubic-bezier(.16,.53,.07,1.01) forwards;
-}
-@keyframes liMove1 {
-    0%{ transform: translateX(5%); }
-    100%{ transform: translateX(15%); }
-}
-@keyframes liMove2 {
-    0%{ transform: translateX(-5%); }
-    100%{ transform: translateX(-15%); }
+    transform: translateY(-90%)
 }
 
-
- 
-#new-menu ul li.activeTab{
-    color: var(--azul);
-    font-weight: 600;
+#new-menu ul .activeTab{
+    cursor: inherit!important;
 }
-#new-menu ul li.activeTab:after{
-    content: '';
-    border-radius: 50%;
-    width: 6px;
-    height: 6px;
-    background-color: var(--azul);
-    display: block;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-35%);
-    left: 110%;
-
+#new-menu ul .activeTab li{
+    color: var(--azul)!important;
+    /* font-weight: 600; */
+}
+#new-menu ul .activeTab:hover li{
+    transform: none!important;
 }
 
 #new-menu{
@@ -238,4 +252,107 @@
 }
 
 
+}
+
+
+#Resortin{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 60px;
+    height: 60px;
+}
+#Resortin>div{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    transform: rotate(-15deg);
+}
+#Resortin>div>div{
+    width: 100%;
+    height: 100%;
+    border: 3px solid var(--azul);
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#aro1{  transform: scaleX(0.3) translate(0 , 0); animation: aro1 5s infinite }
+#aro2{  transform: scaleX(0.3) translate(30% , -5%); animation: aro2 5s infinite }
+#aro3{  transform: scaleX(0.3) translate(60% , -10%); animation: aro3 5s infinite }
+#aro4{  transform: scaleX(0.3) translate(90% , -15%); animation: aro4 5s infinite }
+#aro5{  transform: scaleX(0.3) translate(120% , -20%); animation: aro5 5s infinite }
+
+@keyframes aro1 {
+    0%{ transform: scaleX(0.3) translate(0 , 0); opacity: 0}
+    10% {transform: scaleX(0.3) translate(0 , 0); opacity: 1}
+    90% {transform: scaleX(0.3) translate(0 , 0); opacity: 1}
+    100%{ transform: scaleX(0.3) translate(0 , 0); opacity: 0}
+
+}
+@keyframes aro2 {
+    0%{ transform: scaleX(0.3) translate(0 , 0); opacity: 0}
+    10%{ transform: scaleX(0.3) translate(0 , 0); opacity: 0}
+    20% {transform: scaleX(0.3) translate(30% , -5%); opacity: 1}
+    90% {transform: scaleX(0.3) translate(30% , -5%); opacity: 1}
+    100%{ transform: scaleX(0.3) translate(0 , 0); opacity: 0}
+
+}
+@keyframes aro3 {
+    0%{ transform: scaleX(0.3) translate(30% , -5%); opacity: 0}
+    20%{ transform: scaleX(0.3) translate(30% , -5%); opacity: 0}
+    30% {transform: scaleX(0.3) translate(60% , -10%); opacity: 1}
+    90% {transform: scaleX(0.3) translate(60% , -10%); opacity: 1}
+    100%{ transform: scaleX(0.3) translate(0 , 0); opacity: 0}
+
+}
+@keyframes aro4 {
+    0%{ transform:  scaleX(0.3) translate(60% , -10%); opacity: 0}
+    30%{ transform:  scaleX(0.3) translate(60% , -10%); opacity: 0}
+    40% {transform: scaleX(0.3) translate(90% , -15%); opacity: 1}
+    90% {transform: scaleX(0.3) translate(90% , -15%); opacity: 1}
+    100%{ transform: scaleX(0.3) translate(0 , 0); opacity: 0}
+
+}
+@keyframes aro5 {
+    0%{ transform: scaleX(0.3) translate(90% , -15%); opacity: 0}
+    40%{ transform: scaleX(0.3) translate(90% , -15%); opacity: 0}
+    50% {transform: scaleX(0.3) translate(120% , -20%); opacity: 1}
+    90% {transform: scaleX(0.3) translate(120% , -20%); opacity: 1}
+    100%{ transform: scaleX(0.3) translate(0 , 0); opacity: 1}
+
+}
+
+#Cruz{
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    width: 50px;
+}
+#Cruz>img{
+    animation: rotacion 10s cubic-bezier(.77,-0.01,.29,1.02) alternate infinite; 
+}
+@keyframes rotacion {
+    0%{ transform: rotate(0deg); }
+    20%{ transform: rotate(0deg); }
+    40% {transform: rotate(360deg); }
+    60% {transform: rotate(360deg); }
+    80% {transform: rotate(360deg); }
+    100%{ transform: rotate(0deg); }
+}
+
+.spanMenu{
+    text-align: center;
+    padding-top: 5%;
+    font-family: Ainsdale;
+    display: block;
+    font-weight: 300;
+    font-size: 38vw;
+    white-space: nowrap;
+    position: absolute;
+    color: rgb(221, 221, 221);
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-text-stroke: 1px #3f3f3f;
 }

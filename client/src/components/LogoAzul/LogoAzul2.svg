@@ -9,6 +9,7 @@
 			transition: 0.5s;
 			fill: transparent;
 			stroke: #28353e;
+			stroke: wheat;
 			transition-delay: 3.2s;
 			animation: vanim 3s forwards ease-in-out;
 	}
@@ -21,7 +22,7 @@
 			stroke-dasharray: 1140;
 			transition: 0.5s;
 			fill: transparent;
-			stroke: #28353e;
+			stroke: wheat;
 			transition-delay: 3.8s;
 			animation: eanim 3s forwards ease-in-out;
 	}
@@ -34,7 +35,7 @@
 			stroke-dasharray: 1140;
 			transition: 0.5s;
 			fill: transparent;
-			stroke: #28353e;
+			stroke: wheat;
 			transition-delay: 3.1s;
 			animation: ranim 3s forwards ease-in-out;
 	}
@@ -47,7 +48,7 @@
 			stroke-dasharray: 1140;
 			transition: 0.5s;
 			fill: transparent;
-			stroke: #28353e;
+			stroke: wheat;
 			transition-delay: 3.5s;
 			animation: manim 3s forwards ease-in-out;
 	}
@@ -60,7 +61,7 @@
 			stroke-dasharray: 1140;
 			transition: 0.5s;
 			fill: transparent;
-			stroke: #28353e;
+			stroke: wheat;
 			transition-delay: 3.5s;
 			animation: mmanim 3s 1s forwards ease-in-out;
 	}
@@ -73,7 +74,7 @@
 			stroke-dasharray: 1140;
 			transition: 0.5s;
 			fill: transparent;
-			stroke: #28353e;
+			stroke: wheat;
 			transition-delay: 3.2s;
 			animation: uanim 3s forwards ease-in-out;
 	}

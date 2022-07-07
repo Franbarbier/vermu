@@ -36,9 +36,9 @@ const About = ({setActiveTab}) => {
                             >
                                           <p><span>We are an audiovisual production company</span><div><img src="/assets/miscelanias/todas/Miscelaneas Vermú_Mesa de trabajo 1 copia 79.svg"/></div><span>based in Buenos Aires, Argentina.</span><div><img  style={{'transform':'translate(-65%, -67%)'}} src="/assets/miscelanias/todas/Miscelaneas Vermú_Mesa de trabajo 1 copia 8.svg"/></div><br/><span>Vermú was born in 2021, guided</span><div><img style={{'transform':'translate(-55%, -73%)'}} src="/assets/miscelanias/todas/Miscelaneas Vermú_Mesa de trabajo 1 copia 81.svg"/></div> <div><img style={{'transform':'translate(-86%, -63%)'}} src="/assets/miscelanias/todas/Miscelaneas Vermú_Mesa de trabajo 1 copia 54.svg"/></div><span>by our passions & our love for work.</span><div><img style={{'width':'30px','transform':'translate(-95%, -68%)'}} src="/assets/miscelanias/todas/Miscelaneas Vermú_Mesa de trabajo 1 copia 4.svg"/></div><span>Our main objective is to generate confidence,</span> <span>as we believe the human factor is essential</span><div style={{'width':'110px'}}><img style={{'width':'71px', 'transform':'translate(-55%,-80%)'}} src="/assets/miscelanias/todas/Miscelaneas Vermú_Mesa de trabajo 1 copia 83.svg"/></div><span> when it comes to creating something new.</span><br/><span>We are conected to Earth, and to what</span><div><img style={{'transform':'translate(-65%, -64%)'}} src="/assets/miscelanias/todas/Miscelaneas Vermú_Mesa de trabajo 1 copia 42.svg"/></div><span> brings us here today.</span><span> We are movement. </span><div><img style={{'width': '28px','transform': 'translate(-90%,-70%)'}} src="/assets/miscelanias/todas/Miscelaneas Vermú_Mesa de trabajo 1 copia 77.svg"/></div><span>We are the ones who make things happen.</span> <br/><b>We are vermú.</b></p>
 
-                                          <div id="scroll">
+                                          <a href="#gallery" id="scroll">
                                                  <span></span>
-                                          </div>
+                                          </a>
                                           <span id="see-more"><a href="#gallery">SEE MORE</a></span>
                             </motion.div>
                             :

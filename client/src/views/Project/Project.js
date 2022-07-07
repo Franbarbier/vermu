@@ -10,18 +10,39 @@ import { motion, AnimatePresence } from "framer-motion";
 
 
 import './Project.css';
+import Gallery from '../../components/Gallery/Gallery';
 
 
 const Project = ({setActiveTab}) => {
     
 
        const { id } = useParams();
-       
+       const [scrollNow, setScrollNow] = useState(1)
        const proyecto = bbdd_proyectos[id]
 
        const more_work = bbdd_proyectos.slice(0,5)
 
-       console.log(proyecto)
+       // console.log(proyecto)
+
+       useEffect(() => {
+              const handleScroll = event => {
+                     if (window.scrollY < 750) {
+                            setScrollNow( 1 - (window.scrollY / 750))
+                            console.log(window.scrollY)
+                     }
+              };
+          
+              window.addEventListener('scroll', handleScroll);
+          
+              return () => {
+                window.removeEventListener('scroll', handleScroll);
+              };
+       }, []);
+       
+
+       useEffect(() => {
+              console.log(scrollNow)
+       }, [scrollNow]);
 
   function render(){
       return  <div id="Project-view">
@@ -29,17 +50,14 @@ const Project = ({setActiveTab}) => {
                             <img className="logo" src={LogoAzul} />
                      </a>
                     <main>
-                            <div id="video-project-cont">
-                                   <video width="100%" controls src={"/assets/videos/"+proyecto.video} />
-                                   
-                            </div>
+                            <div style={{'opacity': scrollNow}} className={scrollNow < 0.1 && 'chauGrad'} id="gradient-fondo"></div>
                             <div id="project-info">
                                    <div>
                                           <motion.h3
                                                  initial={{ opacity: 0, y: 30 }}
                                                  animate={{ opacity: 1, y: 0 }}
                                                  // exit={{ opacity: 0 }}
-                                                 transition= {{ duration: 1,  ease: [0.26, 1.03, 0, 1] }}
+                                                 transition= {{ duration: 2,  ease: [0.26, 1.03, 0, 1] }}
                                           >{proyecto.nombre}</motion.h3>
                                    </div>
                                    <div>
@@ -47,10 +65,10 @@ const Project = ({setActiveTab}) => {
                                                  initial={{ opacity: 0, y: 30 }}
                                                  animate={{ opacity: 1, y: 0 }}
                                                  // exit={{ opacity: 0 }}
-                                                 transition= {{ duration: 1,  ease: [0.26, 1.03, 0, 1], delay: 0.4 }}
+                                                 transition= {{ duration: 2,  ease: [0.26, 1.03, 0, 1], delay: 0.4 }}
                                           >{proyecto.descr}</motion.p>
                                    </div>
-                                   <div>
+                                   {/* <div>
                                           <motion.button
                                                  initial={{ opacity: 0, y: 30 }}
                                                  animate={{ opacity: 1, y: 0 }}
@@ -58,7 +76,11 @@ const Project = ({setActiveTab}) => {
                                                  transition= {{ duration: 1,  ease: [0.26, 1.03, 0, 1], delay: 0.7 }}
                                                  onClick={ ()=>{ document.querySelector('#more-work').scrollIntoView({behavior: "smooth"}) } }
                                           >See more</motion.button>
-                                   </div>
+                                   </div> */}
+                            </div>
+                            <div id="video-project-cont">
+                                   <video width="100%" controls src={"/assets/videos/"+proyecto.video} />
+                                   
                             </div>
 
                     </main>
@@ -121,7 +143,11 @@ const Project = ({setActiveTab}) => {
                                                                       }}
                                                  >BACK</motion.h5>
                                                  
-                                                 {proyecto.imgs.map((img)=>(
+                                                 <div id="back">
+                                                        <Gallery />
+                                                 </div>
+
+                                                 {/* {proyecto.imgs.map((img)=>(
                                                         <motion.img
                                                                initial={{ opacity: 0, y: 10 }}
                                                                whileInView={{ opacity: 1, y: 0 }}
@@ -132,7 +158,7 @@ const Project = ({setActiveTab}) => {
                                                                              bounce: 1
                                                                              }}
                                                                src={img} />
-                                                 ))}
+                                                 ))} */}
                                           </div>
                             </div>
                             <div id="projects-related">
@@ -185,7 +211,7 @@ const Project = ({setActiveTab}) => {
                             </div>
                      </div>
                     </div>
-                    <RightBar activePage="Work" />
+                    <RightBar activePage="" />
               </div>
 
        }
