@@ -177,3 +177,67 @@
     overflow: hidden;
     height: 100vh;
 }
+
+@media (max-width: 800px){
+#gradient-fondo {
+    background-repeat: no-repeat;
+    background-size: auto 170%;
+}
+#project-info{
+    width: 100%;
+    padding-top: 15vh;
+}
+#project-info h3{
+    font-size: 7em;
+}
+#project-info>div{
+    overflow: unset;
+}
+#video-project-cont {
+    height: 30vh;
+    max-width: inherit;
+    width: 90%;
+}
+#Project-view>main{
+    min-height: 80vh;
+}
+#more-info-project>div{
+    flex-direction: column;
+}
+
+#more-info-project>div {
+    padding: 10% 0;
+    width: 90%;
+}
+#project-description{
+    width: 100%;
+}
+#project-description>div:first-child {
+    margin-bottom: 30%;
+}
+#back #Gallery-cont {
+    margin-left: -5%;
+    width: 98vw;
+}
+#Project-view .external{
+    height: 100vh;
+}
+#projects-related{
+    width: 100%;
+}
+#projects-related>div{
+    overflow: auto;
+}
+#projects-related ul{
+    display: flex;
+    width: 300vw;
+}
+#projects-related ul li{
+    width: 60vw;
+    margin-right: 10vw;
+}
+.thumb-related {
+    height: 8vh;
+}
+
+}
