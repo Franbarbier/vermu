@@ -127,7 +127,7 @@ const Project = ({setActiveTab}) => {
                                                         >
                                                                <br />
                                                                <br />
-                                                               <span>{Object.keys(staff)}</span>: <span className="tagRole">{Object.values(staff)}</span>
+                                                               <span>{Object.keys(staff)}</span><span>: </span> <span className="tagRole">{Object.values(staff)}</span>
                                                         </motion.div>
                                                  ))}
                                           </div>

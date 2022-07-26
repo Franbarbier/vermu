@@ -1,5 +1,6 @@
 #Project-view>main{
     background-color: #fff;
+    background-color: #000;
     min-height: 90vh;
 }
 #Project-view .logo{
@@ -57,7 +58,7 @@
     font-size: 15em;
     text-transform: uppercase;
 }
-#project-info p{
+#project-info p, #project-info span{
     font-family: 'Exo';
     font-size: 0.8em;
     font-weight: 100;
@@ -81,7 +82,7 @@
     color: #fff;
 }
 .tagRole{
-    font-weight: 400;
+    font-weight: 600!important;
 }
 /* SEccion blanca */
 #more-info-project>div{
@@ -91,10 +92,15 @@
     width: 70%;
     margin: auto;
     background-color: #fff;
+    background-color: #000;
+
 }
 #more-info-project>div img{width: 100%;}
 
-
+#more-info-project>div>div{
+    position: relative;
+    z-index: 5;
+}
 #project-description{
     width: 55%;
 }
@@ -107,10 +113,11 @@
 #more-info-project h5{
     font-weight: 600;
     margin-bottom: 50px;
+    color: #fafafa
 }
-#more-info-project p{
+#more-info-project p, #more-info-project span{
     font-family: 'Exo';
-    color: #545454;
+    color: #bfbfbf;
     font-weight: 300;
 }
 #project-description>div:first-child{
@@ -142,7 +149,7 @@
 #projects-related li h6{
     font-size: 0.8em;
     font-weight: 600;
-    color: var(--negrito);
+    color: #fafafa;
     margin-bottom: 5px;
 }
 #projects-related li p{
@@ -153,7 +160,7 @@
     float: right;
     text-align: right;
     margin-bottom: 15%;
-    border-bottom: 1px solid var(--negrito);
+    border-bottom: 1px solid #fafafa;
     padding-bottom: 5px;
     display:none
 }
@@ -161,4 +168,12 @@
     width: 100vw;
     margin-left: -36%;
     padding-bottom: 5%;
+}
+
+  /* hide scrollbar */
+
+
+#Project-view .external {
+    overflow: hidden;
+    height: 100vh;
 }

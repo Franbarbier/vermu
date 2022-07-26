@@ -1,16 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import RightBar from '../../components/RightBar/RigthBar';
 import { bbdd_proyectos } from '../../global-func.js';
 import { motion, AnimatePresence } from "framer-motion";
+
 
 import './Projects2.css';
 import LogoAzul from '../../components/LogoAzul/LogoAzul.svg'
 
 const Projects2 = ({setActiveTab}) => {
     
+       const [scrollCero, setScrollCero] = useState(false)
 
+       useEffect(()=>{
+              window.scroll(0, document.getElementById("Projects2-view").getBoundingClientRect().top + window.scrollY  );
+
+              const zoom = (event) =>{
+                     if (window.pageYOffset == 0) {
+                            setScrollCero(true)
+                     }
+              }
+              window.addEventListener('scroll', zoom);
+       },[])
+
+       const navigate = useNavigate();
+
+       useEffect(()=>{
+              if (scrollCero) {
+                     navigate('/')
+              }
+       },[scrollCero])
 
 
   function render(){
@@ -26,6 +46,15 @@ const Projects2 = ({setActiveTab}) => {
                                    transition= {{ duration: 1 }}
                             >Our work</motion.h2>
                      </header>
+                     <div id="logos-gallery">
+                            <div>
+                                   {[...Array(12)].map((index) => ( 
+                                   <div>
+                                          <img src ="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Levi%27s_logo.svg/400px-Levi%27s_logo.svg.png" />
+                                   </div>
+                                   ))}
+                            </div>
+                     </div>
                      <ul>
 
                             {bbdd_proyectos.map((proyecto, index)=>(

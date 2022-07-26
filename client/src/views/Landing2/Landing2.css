@@ -8,7 +8,8 @@
 #Landing2-view>div{
     position: relative;
     background-color: #171717;
-    transition: .4s
+    transition: .4s;
+    /* min-height: 101vh; */
 }
 #Landing2-view>div>div{
     display: flex;
@@ -480,4 +481,16 @@ aside path{
     bottom: 5%;
     top: inherit;
 }
+}
+
+
+/* Mobile  */
+@media (max-width: 800px) {
+    #logo-achique{
+        width: 30vw;
+        transform: translate(-50%, 20vh) scale(3.5)
+    }
+    #videos-home ul{
+        margin-top: 45%;
+    }
 }

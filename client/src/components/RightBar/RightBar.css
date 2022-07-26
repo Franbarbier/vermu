@@ -74,9 +74,9 @@
     margin: auto 4.5px;
 }
 #menu-logo{
-    position:absolute;
-    top: 0%;
-    width: 15vw;
+    position: absolute;
+    top: 1%;
+    width: 7vw;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -240,20 +240,6 @@
     }
 }
 
-@media (max-width: 800px) {
-#menu-bars{
-    width: 7vw;
-    right: 2.5%;
-}
-#RightBar-view{
-    width: 7vw;
-    padding: 2vh 10px 3vh 10px;
-    height: 15%
-}
-
-
-}
-
 
 #Resortin{
     position: absolute;
@@ -351,8 +337,45 @@
     font-size: 38vw;
     white-space: nowrap;
     position: absolute;
-    color: rgb(221, 221, 221);
     left: 50%;
     transform: translateX(-50%);
-    -webkit-text-stroke: 1px #3f3f3f;
+    color: #28353e;
+    /* -webkit-text-stroke: 1px #3f3f3f; */
+}
+
+@media (max-width: 800px) {
+
+#menu-bars{
+    width: 7vw;
+    right: 2.5%;
+    
+}
+#RightBar-view{
+    width: 7vw;
+    padding: 2vh 10px 3vh 10px;
+    height: 15%;
+    z-index: 2;
+}
+#new-menu ul{
+    margin: 30% auto 0
+}
+#menu-logo {
+    width: 30vw;
+}
+#new-menu ul a{
+    width: auto;
+}
+#new-menu aside {
+    top: 40%;
+    right: -25%;
+}
+
+.spanMenu{
+    white-space: inherit;
+}
+#new-menu {
+    animation: bckMove 20s ease-in-out infinite alternate;
+}
+
+
 }

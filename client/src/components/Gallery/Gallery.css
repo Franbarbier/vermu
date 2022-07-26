@@ -119,6 +119,18 @@
   #Gallery-cont>div>div img:hover {
     transform: scale(1.2);
 }
+.horizontal-scroll-wrapper{
+  transform: rotate(-90deg) translate3d(-10vh,-100vh,0)
+}
+.horizontal-scroll-wrapper::-webkit-scrollbar {
+  width: 5px;
+  height: 1px;
+}
+
+.horizontal-scroll-wrapper::-webkit-scrollbar-button {
+  width: 5px;
+  height: 1px;
+}
   #Gallery-cont p {
     margin: 0;
   }

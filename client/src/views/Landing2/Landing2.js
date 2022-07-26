@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import Loader from '../../components/Loader/Loeader';
 import RightBar from '../../components/RightBar/RigthBar';
 import { motion, AnimatePresence } from "framer-motion";
@@ -45,23 +45,27 @@ const Landing2 = ({ setActiveTab }) => {
 
 
 
-function selectProject(e) {
-       // Que desaparezca la info actual
-       // Que cambie la info
-       if (e.target.tagName != "LI") {
-              var targ = e.target.closest('li') 
-       }else{
-              var targ = e.target
+       function selectProject(e) {
+              // Que desaparezca la info actual
+              // Que cambie la info
+              if (e.target.tagName != "LI") {
+                     var targ = e.target.closest('li') 
+              }else{
+                     var targ = e.target
+              }
+              setActiveProject(targ.getAttribute('data-id'))
+
+              // Que aparezca la nueva info
+
        }
-       setActiveProject(targ.getAttribute('data-id'))
 
-       // Que aparezca la nueva info
+       // --- BUTTON
+       // const $ = (s, o = document) => o.querySelector(s);
+       const $$ = (s, o = document) => o.querySelectorAll(s);
 
-}
 
-// --- BUTTON
-// const $ = (s, o = document) => o.querySelector(s);
-const $$ = (s, o = document) => o.querySelectorAll(s);
+       const navigate = useNavigate();
+
 
 useEffect(()=>{
 
@@ -91,37 +95,45 @@ $$(`.play-button`).forEach((el) =>
 setTimeout(() => {
       for (let index = 0; index < document.querySelectorAll('#logo-achique path').length; index++) {
        const element = document.querySelectorAll('#logo-achique path')[index];
-       element.style.fill = '#28353e'
-       element.style.fill = 'wheat'
+       // element.style.fill = '#28353e'
+       element.style.fill = 'white'
        element.style.filter = 'drop-shadow(2px 4px 6px #00000078)'
       }
 }, 100);
 
 
-
-
      const zoom = (event) =>{
-              setScrollNow(true)
+       setScrollNow(true)
      }
 
-     window.addEventListener('wheel', zoom);
+     window.addEventListener('scroll', zoom);
      
 
 
 }, [])
 
+console.log(scrollNow)
 
 useEffect(()=>{
        if (scrollNow) {
+              const zoom2 = (event) =>{
+                     navigate('/projects')
+                     window.removeEventListener("scroll",zoom2)
+                   }
+              
               // document.querySelector('body').style.overflow = 'hidden'
-              window.scrollTo(0,document.body.scrollHeight);
+              // window.scrollTo(0,document.body.scrollHeight);
+              window.scrollTo(0, document.querySelector('#scroll-h') );
               document.querySelector('#logo-achique').style.transform = 'translate(-50%, -10%) scale(1)';   
               document.querySelector('#banner').style.filter = 'blur(130px)';   
               setTimeout(() => {
                      document.querySelector('#banner').style.opacity = '0';   
                      setTimeout(() => {
                             document.querySelector('#banner').style.height = '0';  
-                            document.querySelector('#bannerVacio').style.height = '0';   
+                            document.querySelector('#bannerVacio').style.height = '0';
+                            document.querySelector('#scroll-h').style.minHeight = '101vh';
+
+                            window.addEventListener('scroll', zoom2)
                      }, 500);
               }, 300);
        }
@@ -141,15 +153,7 @@ function listenToScroll() {
        })
      }
 
-function toProjects(){
 
-       document.querySelector('#scroll-h').style.filter = 'brightness(0)';
-       
-       setTimeout(() => {
-              // window.location.href = "/projects";
-              document.location.href = '/projects'
-       }, 500);
-}
 
 
   function render(){
@@ -241,7 +245,7 @@ function toProjects(){
                                           <p>Watch now</p>
                                    </div>
                             </div>
-                            <div onClick={toProjects} to="/projects" id="more-work-cont">
+                            <div onClick={ ()=>{ navigate('/projects') } } id="more-work-cont">
                                    <div>
                                           <p>MORE WORK</p>
                                           {/* <img src="/assets/down.png" /> */}

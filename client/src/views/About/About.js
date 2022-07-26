@@ -14,7 +14,19 @@ const About = ({setActiveTab}) => {
     
 
        const [pVisible, setPVisible] = useState(false)
+       const [scrollNow, setScrollNow] = useState(false);
 
+
+       useEffect(()=>{
+              const zoomAbout = (event) =>{
+                     setPVisible(true)
+              }
+         
+              window.addEventListener('scroll', zoomAbout);
+              
+       }, [])
+         
+         
 
   function render(){
       return  <div id="About-view">

@@ -4,6 +4,7 @@ html{
 #About-view{
     background-color: var(--azul);
     background-color: #000;
+    min-height: 101vh;
 }
 #About-view>div:first-child{
     height: 100vh;
@@ -180,4 +181,30 @@ html{
     transform: translateX(-50%);
     bottom: -80%;
     opacity: 0.8;
+}
+
+
+
+@media (max-width: 800px) {
+#info-us{
+  transform: translate(-50%, -20%)
+}
+#info-us p {
+  transform: scale(1.1);
+  font-size: 12pt;
+}
+
+#logos-cont img {
+  top: 30%;
+  width: 90vw;
+  height: auto;
+}
+#scroll {
+  bottom: -20vh;
+}
+#see-more {
+  bottom: -25vh;
+}
+
+
 }

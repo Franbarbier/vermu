@@ -20,16 +20,17 @@
 #data-contact{
     text-align: center;
     position: absolute;
-    top: 15%;
+    top: 10%;
     left: 5%;
     width: 90%;
 }
 #data-contact h5{
-    font-size: 8em;
+    font-size: 12em;
     color: #ECECEC;
     opacity: 0.2;
     font-weight: bold;
     letter-spacing: 3px;
+    font-family: 'Ainsdale';
 }
 #data-contact>div{
     margin: 5% auto;
@@ -69,8 +70,8 @@
 #wanna{
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 57vh) scale(0.17);
-    top: 5%;
+    transform: translate(-50%, 51vh) scale(0.17);
+    top: 12%;
     text-align: center;
     transition: .5s;
     width: 80%;
@@ -177,6 +178,8 @@
     color: #101010!important;
     background-size: 500vw 500vw!important;
     cursor: inherit!important;
+    line-height: 0.9;
+    height: 2em;
 
 }
 #wanna aside{
@@ -222,3 +225,40 @@
 
 }
 #wanna.ahorasi aside, #wanna.ahorasi span, #wanna.ahorasi a{display:inline-block; opacity: 1}
+
+
+
+@media (max-width: 800px) {
+    
+#wanna {
+    transform: translate(-50%, 62vh) scale(0.5);
+  width: 80vh;
+}
+#data-contact{
+  top: 8%
+}
+#Contact-view .logo {
+  top: -1%;
+  width: 30vw;
+}
+#wanna.ahorasi{
+    width: 90%;
+    padding: 13% 0;
+}
+.nojoin h6{
+  font-size: 3.5em;
+}
+#data-contact h5 {
+    font-size: 9em;
+}
+
+#wanna.ahorasi h6{
+    margin-top: 15%;
+    margin-bottom: 10%;
+}
+#wanna.ahorasi span, #wanna.ahorasi a {
+    font-size: 1.2em;
+}
+    
+
+}

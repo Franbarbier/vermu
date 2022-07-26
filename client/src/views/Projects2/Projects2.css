@@ -12,6 +12,7 @@
     background-color: #000;
     position: relative;
     overflow: hidden;
+    margin-top: 15vh;
 }
 body{background-color: #000;}
 #Projects2-view>main{position:relative;z-index:2}
@@ -31,9 +32,13 @@ body{background-color: #000;}
 #Projects2-view header h2{
     text-align: center;
     color: #fff;
-    font-size: 2.5em;
+    font-size: 5em;
     font-weight: 600;
+    font-family: 'Ainsdale';
+    letter-spacing: 2px;
+    font-weight: 400;
     position: relative;
+    text-transform: uppercase ;
 }
 #Projects2-view header h2::after{
     content: '';
@@ -42,7 +47,7 @@ body{background-color: #000;}
     height: 200px;
     background: url('/public/assets/miscelanias/miscelanias (2).svg');
     position: absolute;
-    top: -150%;
+    top: -57%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -146,4 +151,73 @@ body{background-color: #000;}
     border-color: #fafafa; */
     font-weight: 600;
     letter-spacing: 5px;
+}
+
+#logos-gallery>div{
+    width: 90%;
+    margin: auto;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#logos-gallery>div>div{
+    width: 25%;
+    margin: 3% 0;
+    z-index: 3;
+    position: relative;
+}
+#logos-gallery>div>div img{
+    width: 60%;
+    margin: auto;
+    display: block;
+    filter: grayscale(1);
+    opacity: 0.2;
+    cursor: pointer;
+    transition: .4s;
+}
+#logos-gallery>div>div img:hover{
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+@media (max-width: 800px) {
+
+#Projects2-view .logo{
+    width: 30vw;
+}
+#Projects2-view header {
+    padding: 45% 0 48px;
+}
+#Projects2-view header h2{
+    font-size: 4em;
+}
+#Projects2-view header h2::after{
+    top: -87%;
+}
+#logos-gallery>div>div {
+    width: 33%;
+}
+#logos-gallery>div>div img {
+    width: 75%;
+}
+#Projects2-view main ul li>a>div, #Projects2-view main ul li:nth-child(even)>a>div{
+    flex-direction: column;
+    margin-bottom: 40%;
+}
+
+.videos-cont{
+    width: 100%;
+    height: 30vh;
+    margin-bottom: 5%;
+}
+.txts-cont{
+    width: 100%;
+}
+.txts-cont h4, #Projects2-view main ul li button, .txts-cont div{
+    margin-top: 5%;
+}
+
+
 }
